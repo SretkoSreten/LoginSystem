@@ -1,0 +1,38 @@
+{
+  "name": "login_system",
+  "version": "1.0.0",
+  "description": "This is my login system with docker and postragesql",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "node": "node ./src/app.js",
+    "make_migrate": "knex migrate:make init",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "make_seed": "knex seed:make 01_users",
+    "seed": "knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "flash": "^1.1.0",
+    "googleapis": "^85.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.10",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.7.1"
+  }
+}
